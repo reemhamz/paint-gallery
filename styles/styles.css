@@ -1,0 +1,89 @@
+/* Setting font styling */
+h1,
+h2,
+h3,
+h4,
+.button {
+  font-family: "East Sea Dokdo", cursive;
+  font-weight: lighter;
+}
+
+h1{
+    font-size: 122px;
+}
+h2 {
+  font-size: 75px;
+}
+
+h3 {
+  font-size: 55px;
+}
+
+h4{
+    font-size: 40px;
+}
+
+.button {
+  font-size: 45px;
+}
+
+nav,
+p {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  letter-spacing: 0.2px;
+}
+
+nav {
+    font-weight: 'Medium';
+}
+
+p{
+    font-weight: 'Regular';
+}
+
+/* Header styling */
+.header {
+  background-image: url(../images/header-image.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: scroll;
+  height: 100vh;
+}
+
+.header-nav li {
+  list-style: none;
+  /* display: inline-block; */
+  float: left;
+  padding: 0 1rem;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: "";
+  clear: both;
+  height: 0;
+}
+
+/* Main section styling */
+/* Setting background colours */
+.product,
+.extras,
+.big-footer {
+  background-color: #ffe9e9;
+}
+
+.exhibitions,
+.brushes,
+.paint {
+  background-color: #f7dae8;
+}
+
+/* Footer styling */
+
+.footer-nav li {
+  list-style: none;
+}
