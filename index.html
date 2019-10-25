@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/a6deab4c82.js"></script>
     <link href="https://fonts.googleapis.com/css?family=East+Sea+Dokdo|Roboto:400,500&display=swap" rel="stylesheet">
     <title>Project 1 - Paint Gallery</title>
 
@@ -14,107 +15,177 @@
 
 <body>
 
-    <header class='header wrapper'>
+    <header class='header'>
 
-        <nav class='navbar header-nav'>
-            <ul class='clearfix'>
-                <li>Home</li>
-                <li>About</li>
-                <li>Blog</li>
-                <li>Contact</li>
+        <div class='clearfix wrapper'>
+            <nav class='navbar header-nav'>
+                <ul class='clearfix'>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Blog</li>
+                    <li>Contact</li>
+                </ul>
+            </nav>
+            <h1>
+                Paint Gallery
+            </h1>
+
+        </div>
+        <div class="social-icons">
+            <ul>
+                <li><a href=""></a><i class="fab fa-instagram fa-3x"></i></li>
+                <li><a href=""></a><i class="fab fa-facebook-f fa-3x"></i></li>
+                <li><a href=""></a><i class="fab fa-snapchat fa-3x"></i></li>
+                <li><a href=""></a><i class="fab fa-twitter fa-3x"></i></li>
             </ul>
-        </nav>
-        <h1>
-            Paint Gallery
-        </h1>
+        </div>
+
     </header>
 
     <main>
 
         <section class='product'>
-            <h2>
-                New product on the shelves
-            </h2>
 
-            <img src="images/small-box.jpg" alt="Close-up of some messy paint bottles set on a wooden shelf">
+            <div class="wrapper clearfix">
 
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum nisi fugiat earum atque explicabo magnam
-                praesentium reiciendis, porro accusantium molestias deleniti, ipsam aliquid aliquam eaque? Labore, quam,
-                voluptatibus veritatis, a quod quas nulla culpa facere illum amet ipsum dolores id ducimus suscipit?
-                Unde
-                optio, explicabo deleniti totam similique numquam beatae!
-            </p>
-            <button type='button' class='button'>
-                read more
-            </button>
-        </section>
+                <div class="product-img">
+                    <img src="images/small-box.jpg" alt="Close-up of some messy paint bottles set on a wooden shelf">
+                </div>
 
-        <section class='exhibitions'>
+                <div class="product-content">
+                    <h2>
+                        New product on the shelves
+                    </h2>
 
-            <h2>
-                latest exhibitions
-            </h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum enim, minus eaque in vitae quam
+                        et! Enim magnam quibusdam vero ab quod, illo quidem eum aliquam, sed doloribus necessitatibus
+                        harum perspiciatis in laudantium magni officiis ratione a error ipsum obcaecati ducimus. Enim
+                        blanditiis eos quisquam, aut facilis magni ea minus.
+                    </p>
 
-            <img src="images/gallery-image-1.jpg" alt="Close-up abstract and splattered oil painting on canvas">
-            <img src="images/gallery-image-3.jpg"
-                alt="Top view of paint bottles and paper plates with mixed paint combinations.">
-            <img src="images/gallery-image-2.jpg" alt="Close up of bumps and ridges of an oil painting on canvas.">
-
-        </section>
-
-        <section class='extras'>
-            <div class='catalogue'>
-                <h3>catalogue</h3>
+                    <button type='button' class='button blue-button'>
+                        read more
+                    </button>
+                </div>
             </div>
 
-            <div class='events'>
-                <h3>events</h3>
+        </section>
+
+        <section class='exhibitions clearfix'>
+
+            <div class="wrapper clearfix">
+                <div class="exhibit-title">
+                    <h2>
+                        latest exhibitions
+                    </h2>
+                </div>
+
+                <div class="exhibit-images">
+
+                    <ul>
+                        <li><img src="images/gallery-image-1.jpg"
+                                alt="Close-up abstract and splattered oil painting on canvas"></li>
+                        <li><img src="images/gallery-image-3.jpg"
+                                alt="Top view of paint bottles and paper plates with mixed paint combinations."></li>
+                        <li><img src="images/gallery-image-2.jpg"
+                                alt="Close up of bumps and ridges of an oil painting on canvas."></li>
+                    </ul>
+
+                </div>
+
             </div>
 
-            <div class='collab'>
-                <h3>collaboration</h3>
+
+        </section>
+
+        <section class='extras clearfix'>
+            <div class="wrapper">
+                <ul>
+                    <li class='extras-box'><i class="far fa-images fa-5x"></i>
+                        <h3>catalogue</h3>
+                    </li>
+                    <li class='extras-box'><i class="far fa-calendar-alt fa-5x"></i>
+                        <h3>events</h3>
+                    </li>
+                    <li class='extras-box'><i class="far fa-handshake fa-5x"></i>
+                        <h3>collaborations</h3>
+                    </li>
+                </ul>
             </div>
         </section>
 
-        <section class='brushes'>
-            <h2>
-                Finding the right brushes
-            </h2>
+        <section class='brushes clearfix'>
 
-            <img src="images/right-image.jpg" alt="A pile of messy paint brushes with dry paint on the bristles">
+            <div class="wrapper">
 
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Est sunt corrupti maxime alias, excepturi
-                similique
-                debitis nobis harum esse id consectetur, eligendi consequuntur sequi vel? Omnis in alias accusantium
-                voluptatibus?
-            </p>
 
-            <button type='button' class='button'>
-                read more
-            </button>
+
+                <div class="brushes-content">
+                    <h2>
+                        Finding the right brushes
+                    </h2>
+
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est sunt corrupti maxime alias,
+                        excepturi
+                        similique
+                        debitis nobis harum esse id consectetur, eligendi consequuntur sequi vel? Omnis in alias
+                        accusantium
+                        voluptatibus?
+                    </p>
+
+                    <button type='button' class='button purple-button'>
+                        read more
+                    </button>
+                </div>
+
+
+
+
+            </div>
+            <div class="brushes-img clearfix">
+                <img src="images/right-image.jpg" alt="A pile of messy paint brushes with dry paint on the bristles">
+            </div>
 
         </section>
 
-        <section class='paint'>
-            <h2>
-                All kinds of paints
-            </h2>
+        <section class='paint clearfix'>
 
-            <img src="images/left-image.jpg"
-                alt="Opened buckets of paint with the artist dipping their paint brush in the brown paint bucket">
+            <div class="paint-img clearfix">
+                <img src="images/left-image.jpg"
+                    alt="Opened buckets of paint with the artist dipping their paint brush in the brown paint bucket">
+            </div>
 
-            <button type='button' class='button'>
-                read more
-            </button>
+            <div class="wrapper">
 
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Est sunt corrupti maxime alias, excepturi
-                similique
-                debitis nobis harum esse id consectetur, eligendi consequuntur sequi vel? Omnis in alias accusantium
-                voluptatibus?
-            </p>
+                <div class="paint-content">
+
+                    <h2>
+                        All kind of paints
+                    </h2>
+
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est sunt corrupti maxime alias,
+                        excepturi
+                        similique
+                        debitis nobis harum esse id consectetur, eligendi consequuntur sequi vel? Omnis in alias
+                        accusantium
+                        voluptatibus?
+                    </p>
+
+                    <button type='button' class='button purple-button'>
+                        read more
+                    </button>
+
+
+                </div>
+
+
+
+            </div>
+            
+
         </section>
 
     </main>
@@ -141,7 +212,7 @@
                 </p>
                 <form action="">
                     <input type="email" name="email" placeholder="email address">
-                    <input type="submit" value="Subscibe~" class ='button'>
+                    <input type="submit" value="Subscibe~" class='button blue-button'>
                 </form>
             </div>
 
