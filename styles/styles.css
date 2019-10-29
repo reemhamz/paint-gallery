@@ -10,6 +10,10 @@
 html {
   font-size: 62.5%;
 }
+
+body {
+  color: #201e21;
+}
 /* Setting font styling */
 h1,
 h2,
@@ -22,11 +26,12 @@ h4,
 
 h1 {
   font-size: 12.2rem;
-  /* text-align: left; */
+  line-height: 0.6;
   padding: 150px 0;
 }
 h2 {
   font-size: 7.5rem;
+  line-height: 0.7;
 }
 
 h3 {
@@ -48,7 +53,7 @@ header {
 nav,
 p {
   font-family: "Roboto", sans-serif;
-  font-size: 2rem;
+  font-size: 1.9rem;
   letter-spacing: 0.2px;
 }
 
@@ -69,7 +74,7 @@ img {
 }
 
 .wrapper {
-  max-width: 1080px;
+  max-width: 1280px;
   margin: 0 auto;
   width: 80%;
 }
@@ -129,13 +134,32 @@ nav {
 .blue-button {
   background-color: #0178a5;
   color: white;
-  padding: 0px 30px;
+  padding: 0px 20px;
 }
 
 .purple-button {
-  background-color: #A7059B;
+  background-color: #a7059b;
   color: white;
   padding: 0px 30px;
+}
+
+@media (max-width: 800px){
+  h1{
+    font-size: 10rem;
+  }
+  h2{
+    font-size: 5.5rem;
+  }
+  h3 {
+    font-size: 5rem;
+  }
+  p, nav{
+    font-size: 1.5rem;
+  }
+
+  .button{
+    font-size: 3.5rem;
+  }
 }
 
 /* Product section */
@@ -154,6 +178,7 @@ nav {
 
 .product-content h2 {
   margin: 0 auto;
+  
 }
 
 .product-content p {
@@ -168,7 +193,24 @@ nav {
 
 .product-img img {
   display: block;
+  margin: 0 auto;
 }
+
+/* Product media queries */
+
+@media (max-width: 1000px){
+  .product-img{
+    width: 100%;
+  }
+
+  .product-content{
+    width: 100%;
+    text-align: left;
+    padding: 10%
+  }
+}
+
+
 /* Exhibitions styling */
 
 .exhibitions {
@@ -177,6 +219,7 @@ nav {
 .exhibitions h2 {
   text-align: center;
   margin: 20px auto;
+  
 }
 .exhibitions ul {
   padding: 0;
@@ -197,11 +240,29 @@ nav {
 
 .exhibit-images img {
   display: block;
+  width: 100%;
 }
+
+/* exhibition media queries */
+@media (max-width: 800px){
+
+  .exhibitions ul li {
+  width: 50%;
+  padding: 5px;
+  margin: 0;
+  }  
+
+  .exhibitions ul li:nth-child(3){
+    width: 100%;
+  }
+}
+
+
 
 /* Extras styling */
 .extras {
   padding: 40px 0;
+  margin: 0 auto;
 }
 
 .extras ul {
@@ -212,10 +273,13 @@ nav {
 .extras li {
   float: left;
   width: calc((100% / 3) - 20px);
-  margin-right: 20px;
+  margin-right: 30px;
   margin-bottom: 30px;
-  display: block;
   text-align: center;
+}
+
+.extras ul li:nth-child(3) {
+  margin-right: 0px;
 }
 
 .extras li h3 {
@@ -226,31 +290,33 @@ nav {
   color: #0178a5;
 }
 
-/* Brushes section styling */
+/* Extras media queries */
 
-.brushes {
+@media (max-width: 770px){
+  .extras li{
+    width: 100%;
+  }
 }
+
+/* Brushes section styling */
 
 .brushes-content,
 .brushes-img {
-  float: left;
+  float: right;
 }
 
 .brushes-content {
-  width: calc(50% - 30px);
-  margin-right: 30px;
-  margin-top: 30px; 
+  width: 40%;
+  margin-left: 10%;
+  margin-top: 30px;
   padding-right: 50px;
+  /* max-width: 640px; */
 }
 
 .brushes-content h2 {
   padding-top: 50px;
   margin: 0px auto;
-  line-height: 0.8;
-}
-
-.brushes-content p{
-  /* padding: 0px;; */
+  
 }
 
 .brushes-img {
@@ -262,34 +328,231 @@ nav {
   display: block;
 }
 
+/* media queries (brushes) */
+
+@media (min-width: 1550px) {
+  .brushes-wrapper {
+    max-width: 1550px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 1150px) {
+  .brushes-content,
+  .brushes-img {
+    float: right;
+  }
+
+  .brushes-content {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    padding-right: 0;
+  }
+  .brushes-img {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
 
 /* Paints styling */
 
-.paint-content, .paint-img{
+.paint-content,
+.paint-img {
   float: left;
 }
 
-.paint-content{
+.paint-content {
   width: calc(50% - 30px);
   margin-left: 30px;
   margin-top: 30px;
   padding-left: 50px;
-  /* padding: 30px; */
 }
 
 .paint-content h2 {
   margin: 0 auto;
-  padding-top:100px;
+  padding-top: 100px;
   
-  line-height: 0.8;
 }
 
-.paint-img{
-  width: 50%
+.paint-img {
+  width: 50%;
+}
+
+.paint-img img {
+  display: block;
+}
+
+/* media queries (paint) */
+
+@media (min-width: 1550px) {
+  .paint-wrapper {
+    max-width: 1550px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 1150px) {
+  .paint-content,
+  .paint-img {
+    float: right;
+  }
+
+  .paint-content {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    padding-left: 0;
+  }
+
+  .paint-content h2 {
+    padding: 0;
+  }
+  .paint-img {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 /* Footer styling */
 
+footer {
+  margin: 0 auto;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.big-footer {
+  padding: 80px 0;
+}
+
+.footer-nav,
+.subscribe,
+.contact {
+  float: left;
+}
+
+.footer-nav {
+  display: inline-block;
+  width: 20%;
+}
+
 .footer-nav li {
   list-style: none;
+  padding: 0.2rem 0;
+}
+
+.footer-nav ul {
+  padding: 0;
+}
+
+.subscribe {
+  width: 53%;
+  text-align: center;
+}
+
+.subscribe h3 {
+  line-height: 0.8;
+  margin: 0 auto;
+}
+
+.subscribe-button,
+.email {
+  float: left;
+}
+
+.subscribe-button {
+  padding: 0;
+  height: 60px;
+  width: 30%;
+  display: block;
+}
+
+.email {
+  height: 60px;
+  text-align: left;
+  font-size: 2rem;
+  width: 70%;
+  display: block;
+  padding-left: 30px;
+}
+
+.contact {
+  width: 27%;
+  text-align: right;
+}
+
+.contact h4 {
+  line-height: 0.8;
+  margin: 0 auto;
+}
+
+.contact a {
+  text-decoration: none;
+  color: #201e21;
+}
+
+.contact p {
+  line-height: 0.8;
+}
+
+/* Tablet media Query (footer) */
+@media (max-width: 1240px) {
+  .footer-nav {
+    width: 100%;
+  }
+
+  .footer-nav ul {
+    text-align: center;
+  }
+
+  .footer-nav ul li {
+    display: inline-block;
+    padding: 0 1rem;
+  }
+
+  .subscribe {
+    width: 100%;
+    padding-top: 50px;
+    margin: 0 auto;
+  }
+
+  .email {
+    text-align: center;
+  }
+
+  .contact {
+    width: 100%;
+    text-align: center;
+    padding-top: 50px;
+  }
+}
+
+/* Phone media query (footer) */
+@media (max-width: 670px) {
+  form {
+    text-align: center;
+  }
+  .email {
+    width: 100%;
+  }
+  .subscribe-button {
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+    float: none;
+  } 
+}
+
+/* Little footer */
+
+.little-footer {
+  background-color: #201e21;
+  color: white;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0.1px 0;
 }

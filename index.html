@@ -117,9 +117,12 @@
 
         <section class='brushes clearfix'>
 
-            <div class="wrapper">
+            <div class="brushes-wrapper clearfix">
 
-
+                <div class="brushes-img clearfix">
+                    <img src="images/right-image.jpg"
+                        alt="A pile of messy paint brushes with dry paint on the bristles">
+                </div>
 
                 <div class="brushes-content">
                     <h2>
@@ -140,43 +143,41 @@
                     </button>
                 </div>
 
-
-
-
             </div>
-            <div class="brushes-img clearfix">
-                <img src="images/right-image.jpg" alt="A pile of messy paint brushes with dry paint on the bristles">
-            </div>
-
         </section>
 
         <section class='paint clearfix'>
 
-            <div class="paint-img clearfix">
-                <img src="images/left-image.jpg"
-                    alt="Opened buckets of paint with the artist dipping their paint brush in the brown paint bucket">
-            </div>
+            <div class="paint-wrapper clearfix">
 
-            <div class="wrapper">
+                <div class="paint-img clearfix">
+                    <img src="images/left-image.jpg"
+                        alt="Opened buckets of paint with the artist dipping their paint brush in the brown paint bucket">
+                </div>
 
-                <div class="paint-content">
+                <div class="wrapper">
 
-                    <h2>
-                        All kind of paints
-                    </h2>
+                    <div class="paint-content">
 
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est sunt corrupti maxime alias,
-                        excepturi
-                        similique
-                        debitis nobis harum esse id consectetur, eligendi consequuntur sequi vel? Omnis in alias
-                        accusantium
-                        voluptatibus?
-                    </p>
+                        <h2>
+                            All kind of paints
+                        </h2>
 
-                    <button type='button' class='button purple-button'>
-                        read more
-                    </button>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est sunt corrupti maxime alias,
+                            excepturi
+                            similique
+                            debitis nobis harum esse id consectetur, eligendi consequuntur sequi vel? Omnis in alias
+                            accusantium
+                            voluptatibus?
+                        </p>
+
+                        <button type='button' class='button purple-button'>
+                            read more
+                        </button>
+                    </div>
+
+
 
 
                 </div>
@@ -184,7 +185,7 @@
 
 
             </div>
-            
+
 
         </section>
 
@@ -192,48 +193,63 @@
 
     <footer>
 
-        <div class='big-footer'>
+        <div class='big-footer clearfix'>
 
-            <nav class='navbar footer-nav'>
+            <div class='wrapper'>
                 <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Blog</li>
-                    <li>Contact</li>
+                    <li>
+                        <nav class='navbar footer-nav clearfix wrapper'>
+                            <ul>
+                                <li>Home</li>
+                                <li>Blog</li>
+                                <li>Gallery</li>
+                                <li>Contact</li>
+                            </ul>
+                        </nav>
+                    </li>
+                    <li>
+                        <div class='subscribe'>
+                            <h3>
+                                Stay updated
+                            </h3>
+                            <p>
+                                Subscribe to our newsletter to stay updated!
+                            </p>
+                            <form action="">
+                                <input type="email" name="email" placeholder="email address" class="email">
+                                <input type="submit" value="Subscibe" class='button blue-button subscribe-button'>
+                            </form>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class='contact'>
+                            <h4>
+                                Contact
+                            </h4>
+                            <p>
+                                <a href="mailto:info@email.com">info@email.com</a>
+                                |
+                                <a href="tel:1234567890">123 - 456 - 7890</a>
+
+                            </p>
+                            <p>123 Some Road, Toronto, ON</p>
+                            <p>A5A 5A5, Canada</p>
+
+                        </div>
+                    </li>
                 </ul>
-            </nav>
-
-            <div class='subscribe'>
-                <h3>
-                    Stay updated
-                </h3>
-                <p>
-                    Subscribe to our newsletter to stay updated!
-                </p>
-                <form action="">
-                    <input type="email" name="email" placeholder="email address">
-                    <input type="submit" value="Subscibe~" class='button blue-button'>
-                </form>
-            </div>
-
-            <div class='contact'>
-                <h4>
-                    Contact
-                </h4>
-                <p>info@email.com | 123 - 456 - 7890</p>
-                <p>123 Some Road, Toronto, ON</p>
-                <p>A5A 5A5, Canada</p>
 
             </div>
-
-
         </div>
 
-
         <div class='little-footer'>
-            <p>
-                Copyright © 2019 HackerYou
-            </p>
+            <div class="wrapper">
+                <p>
+                    Copyright © 2019 HackerYou
+                </p>
+            </div>
+
         </div>
 
 
