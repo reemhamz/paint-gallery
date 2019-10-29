@@ -540,7 +540,6 @@ footer ul {
   .footer-nav ul li{
     float: left;
     width: calc(100% / 4);
-    color: blue;
   }
 
   .email {
