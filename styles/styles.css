@@ -536,6 +536,12 @@ footer ul {
   form {
     text-align: center;
   }
+
+  .footer-nav ul li{
+    float: left;
+    width: calc(100% / 4)
+  }
+
   .email {
     width: 100%;
     margin-bottom: 10px;
@@ -548,8 +554,12 @@ footer ul {
     float: none;
   } 
   .subscribe{
-    padding: 20px;
+    /* padding: 20px; */
     width: 100%;
+  }
+
+  .wrapper{
+    width: 90%;
   }
 }
 
