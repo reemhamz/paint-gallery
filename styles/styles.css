@@ -9,11 +9,9 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
-body {
-  color: #201e21;
-}
 /* Setting font styling */
 h1,
 h2,
@@ -27,8 +25,9 @@ h4,
 h1 {
   font-size: 12.2rem;
   line-height: 0.6;
-  padding: 150px 0;
+  padding-top: 150px;
 }
+
 h2 {
   font-size: 7.5rem;
   line-height: 0.7;
@@ -48,6 +47,8 @@ h4 {
 
 header {
   position: relative;
+  padding-bottom: 150px;
+  margin: 0;
 }
 
 nav,
@@ -63,6 +64,18 @@ nav {
 
 nav ul {
   padding: 0;
+  margin: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+nav ul li:hover {
+  color: white;
+  background-color: #e60122;
+  transition: 0.5s;
 }
 
 p {
@@ -73,52 +86,7 @@ img {
   max-width: 100%;
 }
 
-.wrapper {
-  max-width: 1280px;
-  margin: 0 auto;
-  width: 80%;
-}
-
-/* Header styling */
-.header {
-  background-image: url(../images/header-image.jpg);
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  padding: 1px;
-}
-
-.header-nav li {
-  list-style: none;
-  float: left;
-  padding: 0 1rem;
-}
-
-nav {
-  margin: 0;
-}
-
-.social-icons {
-  position: absolute;
-  bottom: 0;
-  right: 30px;
-}
-
-.social-icons ul {
-  list-style: none;
-  padding: 0;
-}
-
-.social-icons li {
-  padding: 10px 0;
-}
-
-.social-icons i {
-  color: white;
-}
-
-/* Main section styling */
-/* Setting background colours */
+/* Setting background and button colours */
 .product,
 .extras,
 .big-footer {
@@ -137,30 +105,131 @@ nav {
   padding: 0px 20px;
 }
 
+.blue-button:hover {
+  -webkit-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  transform: scale(1.1);
+  transition: 0.4s;
+  background-color: white;
+  color: #0178a5;
+}
+
 .purple-button {
   background-color: #a7059b;
   color: white;
   padding: 0px 30px;
 }
 
-@media (max-width: 800px){
-  h1{
+.purple-button:hover {
+  -webkit-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  transform: scale(1.1);
+  transition: 0.4s;
+  background-color: white;
+  color: #a7059b;
+}
+
+/* Setting up wrapper for the whole viewport */
+.wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 80%;
+}
+
+
+/* CSS STYLING BEGINS */
+
+/* Header styling */
+.header {
+  background-image: url(../images/header-image.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.header-nav {
+  padding-top: 30px;
+}
+.header-nav li {
+  list-style: none;
+  float: left;
+  padding: 0 1rem;
+}
+
+.burger-btn {
+  display: inline-block;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  visibility: hidden;
+  color: white;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.social-icons {
+  position: absolute;
+  bottom: 0;
+  right: 30px;
+  color: white;
+  visibility: visibile;
+}
+
+.social-icons li:hover {
+  color: #e60122;
+}
+
+.social-icons ul {
+  list-style: none;
+  padding: 0;
+}
+
+.social-icons li {
+  padding: 10px 0;
+}
+
+/* Header Media Queries for Tabelt */
+@media (max-width: 800px) {
+  h1 {
     font-size: 10rem;
   }
-  h2{
+  h2 {
     font-size: 5.5rem;
   }
   h3 {
     font-size: 5rem;
   }
-  p, nav{
-    font-size: 1.5rem;
+  p,
+  nav {
+    font-size: 1.8rem;
   }
 
-  .button{
+  .button {
     font-size: 3.5rem;
   }
+
+  .wrapper {
+    width: 90%;
+  }
 }
+
+/* Header Media Queries for mobile */
+@media (max-width: 500px) {
+  .burger-btn {
+    visibility: visible;
+  }
+  .social-icons {
+    visibility: hidden;
+  }
+  .header-nav {
+    visibility: hidden;
+  }
+}
+
+
+/* Main section styling */
 
 /* Product section */
 
@@ -178,7 +247,6 @@ nav {
 
 .product-content h2 {
   margin: 0 auto;
-  
 }
 
 .product-content p {
@@ -196,17 +264,37 @@ nav {
   margin: 0 auto;
 }
 
-/* Product media queries */
+/* Product Media Queries for Tablet and Mobile */
 
-@media (max-width: 1000px){
-  .product-img{
+@media (max-width: 1000px) {
+  .product {
+    padding-top: 30px;
+  }
+  .product-img {
     width: 100%;
   }
 
-  .product-content{
+  .product-content h2 {
+    padding: 20px 0;
+    line-height: 0.8;
+  }
+
+  .product-content {
     width: 100%;
     text-align: left;
-    padding: 10%
+  }
+
+  .product-content button {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+
+  .product-img img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
   }
 }
 
@@ -219,7 +307,6 @@ nav {
 .exhibitions h2 {
   text-align: center;
   margin: 20px auto;
-  
 }
 .exhibitions ul {
   padding: 0;
@@ -243,21 +330,22 @@ nav {
   width: 100%;
 }
 
-/* exhibition media queries */
-@media (max-width: 800px){
-
+/* exhibition media queries for tablet and mobile*/
+@media (max-width: 800px) {
   .exhibitions ul li {
-  width: 50%;
-  padding: 5px;
-  margin: 0;
-  }  
+    width: calc(50% - 2.5px);
+    padding: 0px;
+    margin-right: 5px;
+  }
 
-  .exhibitions ul li:nth-child(3){
-    width: 100%;
+  .exhibitions ul li:nth-child(2) {
+    margin-right: 0;
+  }
+
+  .exhibitions ul li:nth-child(3) {
+    display: none;
   }
 }
-
-
 
 /* Extras styling */
 .extras {
@@ -290,10 +378,10 @@ nav {
   color: #0178a5;
 }
 
-/* Extras media queries */
+/* Extras media queries for tablet and mobile */
 
-@media (max-width: 770px){
-  .extras li{
+@media (max-width: 770px) {
+  .extras li {
     width: 100%;
   }
 }
@@ -306,30 +394,25 @@ nav {
 }
 
 .brushes-content {
-  width: 40%;
-  margin-left: 10%;
+  width: 50%;
   margin-top: 30px;
   padding-right: 50px;
-  /* max-width: 640px; */
 }
 
 .brushes-content h2 {
   padding-top: 50px;
   margin: 0px auto;
-  
 }
 
 .brushes-img {
   width: 50%;
-  object-fit: cover;
 }
 
 .brushes-img img {
   display: block;
 }
 
-/* media queries (brushes) */
-
+/* Brushes Media Queries for bigger screen */
 @media (min-width: 1550px) {
   .brushes-wrapper {
     max-width: 1550px;
@@ -337,10 +420,14 @@ nav {
   }
 }
 
+/* Brushes Media Queries for tablets and Mobile */
 @media (max-width: 1150px) {
+  .brushes {
+    padding: 50px 0;
+  }
   .brushes-content,
   .brushes-img {
-    float: right;
+    float: none;
   }
 
   .brushes-content {
@@ -351,7 +438,22 @@ nav {
   }
   .brushes-img {
     width: 100%;
+  }
+  .brushes-img img {
     margin: 0 auto;
+  }
+}
+
+/* EXTRA Brushes Media Queries for Mobile */
+@media (max-width: 400px) {
+  .brushes {
+    padding-top: 0;
+  }
+
+  .brushes-img img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
   }
 }
 
@@ -372,7 +474,6 @@ nav {
 .paint-content h2 {
   margin: 0 auto;
   padding-top: 100px;
-  
 }
 
 .paint-img {
@@ -383,8 +484,8 @@ nav {
   display: block;
 }
 
-/* media queries (paint) */
 
+/* Paint Media Queries for bigger screens */
 @media (min-width: 1550px) {
   .paint-wrapper {
     max-width: 1550px;
@@ -393,9 +494,12 @@ nav {
 }
 
 @media (max-width: 1150px) {
+  .paint {
+    padding-bottom: 50px;
+  }
   .paint-content,
   .paint-img {
-    float: right;
+    float: none;
   }
 
   .paint-content {
@@ -406,11 +510,22 @@ nav {
   }
 
   .paint-content h2 {
-    padding: 0;
+    padding-top: 50px;
   }
   .paint-img {
     width: 100%;
-    text-align: center;
+  }
+  .paint-img img {
+    margin: 0 auto;
+  }
+}
+
+/* EXTRA Brushes Media Queries for Mobile */
+@media (max-width: 400px) {
+  .paint-img img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
   }
 }
 
@@ -447,6 +562,7 @@ footer ul {
 
 .footer-nav ul {
   padding: 0;
+  margin: 0;
 }
 
 .subscribe {
@@ -499,8 +615,12 @@ footer ul {
   line-height: 0.8;
 }
 
-/* Tablet media Query (footer) */
+/* Footer media query for tablet and mobile */
 @media (max-width: 1240px) {
+  .big-footer {
+    padding: 40px 0;
+  }
+
   .footer-nav {
     width: 100%;
   }
@@ -511,12 +631,11 @@ footer ul {
 
   .footer-nav ul li {
     display: inline-block;
-    padding: 0 1rem;
   }
 
   .subscribe {
     width: 100%;
-    padding-top: 50px;
+    padding-top: 30px;
     margin: 0 auto;
   }
 
@@ -527,24 +646,25 @@ footer ul {
   .contact {
     width: 100%;
     text-align: center;
-    padding-top: 50px;
+    padding-top: 30px;
   }
 }
 
-/* Phone media query (footer) */
+/* EXTRA Footer media query for mobile*/
 @media (max-width: 670px) {
   form {
     text-align: center;
   }
 
-  .footer-nav ul li{
+  .footer-nav ul li {
     float: left;
     width: calc(100% / 4);
-    color: blue;
   }
 
   .email {
     width: 100%;
+    height: 45px;
+    font-size: 1.8rem;
     margin-bottom: 10px;
     padding: 0;
   }
@@ -553,14 +673,10 @@ footer ul {
     text-align: center;
     margin: 0 auto;
     float: none;
-  } 
-  .subscribe{
-    /* padding: 20px; */
-    width: 100%;
+    height: 45px;
   }
-
-  .wrapper{
-    width: 90%;
+  .subscribe {
+    width: 100%;
   }
 }
 

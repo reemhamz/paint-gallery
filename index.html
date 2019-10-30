@@ -8,46 +8,62 @@
     <script src="https://kit.fontawesome.com/a6deab4c82.js"></script>
     <link href="https://fonts.googleapis.com/css?family=East+Sea+Dokdo|Roboto:400,500&display=swap" rel="stylesheet">
     <title>Project 1 - Paint Gallery</title>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <link rel="stylesheet" href="styles/setup.css">
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 
 <body>
 
-    <header class='header'>
+    <header class='header'>  <!--Start of the header content-->
 
         <div class='clearfix wrapper'>
             <nav class='navbar header-nav'>
                 <ul class='clearfix'>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Blog</li>
-                    <li>Contact</li>
+                    <li>
+                        <a href="#product">Home</a>
+                    </li>
+                    <li>
+                        <a href="#exhibitions">About</a>
+                    </li>
+                    <li>
+                        <a href="#blog">Blog</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
                 </ul>
             </nav>
-            <h1>
+
+            <!-- <a href="#"><i class="fas fa-bars burger-bar fa-5x"></i></a> -->
+            
+            <nav class='burger-menu'>
+                <label class="burger-btn" for="burger-bar"><i class="fas fa-bars fa-4x"></i></label>
+                <input type="checkbox" id="burger-bar" />
+            </nav>
+            
+            
+
+            <h1 class = 'animated fadeInUpBig delay-1s'>
                 Paint Gallery
             </h1>
 
         </div>
-        <div class="social-icons">
+        <div class="social-icons"> <!--Social icons-->
             <ul>
                 <li><a href=""></a><i class="fab fa-instagram fa-3x"></i></li>
                 <li><a href=""></a><i class="fab fa-facebook-f fa-3x"></i></li>
                 <li><a href=""></a><i class="fab fa-snapchat fa-3x"></i></li>
                 <li><a href=""></a><i class="fab fa-twitter fa-3x"></i></li>
             </ul>
-        </div>
+        </div> <!--End of social icons additions-->
 
     </header>
 
-    <main>
+    <main> <!--Start of the main content of the website-->
 
-        <section class='product'>
-
+        <section class='product' id='product'> <!--First section is Product-->
             <div class="wrapper clearfix">
-
                 <div class="product-img">
                     <img src="images/small-box.jpg" alt="Close-up of some messy paint bottles set on a wooden shelf">
                 </div>
@@ -58,10 +74,10 @@
                     </h2>
 
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum enim, minus eaque in vitae quam
-                        et! Enim magnam quibusdam vero ab quod, illo quidem eum aliquam, sed doloribus necessitatibus
-                        harum perspiciatis in laudantium magni officiis ratione a error ipsum obcaecati ducimus. Enim
-                        blanditiis eos quisquam, aut facilis magni ea minus.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta rem accusamus sapiente
+                        exercitationem nisi quo provident, possimus laboriosam eum? Reiciendis quasi repellendus aliquid
+                        quam tempore excepturi quibusdam molestiae non delectus fugiat, repudiandae animi fugit ipsa
+                        totam reprehenderit eius harum inventore. Dignissimos suscipit expedita omnis exercitationem.
                     </p>
 
                     <button type='button' class='button blue-button'>
@@ -70,9 +86,9 @@
                 </div>
             </div>
 
-        </section>
+        </section>  <!--End of the Product section-->
 
-        <section class='exhibitions clearfix'>
+        <section class='exhibitions clearfix' id='exhibitions'>  <!--Start of Exhibitions Section-->
 
             <div class="wrapper clearfix">
                 <div class="exhibit-title">
@@ -95,11 +111,9 @@
                 </div>
 
             </div>
+        </section> <!--End of the Exhibitions section-->
 
-
-        </section>
-
-        <section class='extras clearfix'>
+        <section class='extras clearfix'> <!--Start of the Extras section-->
             <div class="wrapper">
                 <ul>
                     <li class='extras-box'><i class="far fa-images fa-5x"></i>
@@ -114,55 +128,25 @@
                 </ul>
             </div>
         </section>
+        <!--End of the Extras section-->
 
-        <section class='brushes clearfix'>
 
-            <div class="brushes-wrapper clearfix">
+<!--Added brushes and paint section in a div to target them as the Blogs-->
+        <div id='blog'>
 
-                <div class="brushes-img clearfix">
+            <section class='brushes clearfix'>
+                <!--Start of Brushes article section-->
+
+                <div class="brushes-img wrapper">
                     <img src="images/right-image.jpg"
                         alt="A pile of messy paint brushes with dry paint on the bristles">
                 </div>
 
-                <div class="brushes-content">
-                    <h2>
-                        Finding the right brushes
-                    </h2>
-
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est sunt corrupti maxime alias,
-                        excepturi
-                        similique
-                        debitis nobis harum esse id consectetur, eligendi consequuntur sequi vel? Omnis in alias
-                        accusantium
-                        voluptatibus?
-                    </p>
-
-                    <button type='button' class='button purple-button'>
-                        read more
-                    </button>
-                </div>
-
-            </div>
-        </section>
-
-        <section class='paint clearfix'>
-
-            <div class="paint-wrapper clearfix">
-
-                <div class="paint-img clearfix">
-                    <img src="images/left-image.jpg"
-                        alt="Opened buckets of paint with the artist dipping their paint brush in the brown paint bucket">
-                </div>
-
                 <div class="wrapper">
-
-                    <div class="paint-content">
-
+                    <div class="brushes-content">
                         <h2>
-                            All kind of paints
+                            Finding the right brushes
                         </h2>
-
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Est sunt corrupti maxime alias,
                             excepturi
@@ -171,44 +155,83 @@
                             accusantium
                             voluptatibus?
                         </p>
-
                         <button type='button' class='button purple-button'>
                             read more
                         </button>
                     </div>
-
-
-
-
                 </div>
+            </section>
+            <!--End of the Brushes article section-->
 
+            <section class='paint clearfix'>
+                <!--Start of the Paint article section-->
 
+                <div class="paint-wrapper clearfix">
 
-            </div>
+                    <div class="paint-img clearfix">
+                        <img src="images/left-image.jpg"
+                            alt="Opened buckets of paint with the artist dipping their paint brush in the brown paint bucket">
+                    </div>
 
+                    <div class="wrapper">
 
-        </section>
+                        <div class="paint-content">
 
-    </main>
+                            <h2>
+                                All kind of paints
+                            </h2>
+
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Est sunt corrupti maxime alias,
+                                excepturi
+                                similique
+                                debitis nobis harum esse id consectetur, eligendi consequuntur sequi vel? Omnis in alias
+                                accusantium
+                                voluptatibus?
+                            </p>
+
+                            <button type='button' class='button purple-button'>
+                                read more
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--End of the Paint article section-->
+        </div>
+    </main> <!--End of the main content-->
 
     <footer>
-
-        <div class='big-footer clearfix'>
+        <!--Start of the Footer-->
+        
+        <div class='big-footer clearfix' id='contact'>
+            <!-- Big footer starts. This contains all the footer content -->
 
             <div class='wrapper'>
                 <ul>
                     <li>
-                        <nav class='navbar footer-nav clearfix wrapper'>
+                        <nav class='navbar footer-nav clearfix wrapper'> 
+                            <!-- Footer Nav starts -->
                             <ul>
-                                <li>Home</li>
-                                <li>Blog</li>
-                                <li>Gallery</li>
-                                <li>Contact</li>
+                                <li>
+                                    <a href="#product">Home</a>
+                                </li>
+                                <li>
+                                    <a href="#blog">Blog</a>
+                                </li>
+                                <li>
+                                    <a href="#exhibitions">Gallery</a>
+                                </li>
+                                <li>
+                                    <a href="#contact">Contact</a>
+                                </li>
                             </ul>
                         </nav>
+                        <!-- Footer Nav ends -->
                     </li>
                     <li>
                         <div class='subscribe'>
+                            <!-- Subscribtion list content starts -->
                             <h3>
                                 Stay updated
                             </h3>
@@ -220,10 +243,12 @@
                                 <input type="submit" value="Subscibe" class='button blue-button subscribe-button'>
                             </form>
                         </div>
+                        <!-- Subscription list content ends -->
                     </li>
 
                     <li>
-                        <div class='contact'>
+                        <div class='contact'> 
+                            <!-- Contact section with contact information starts -->
                             <h4>
                                 Contact
                             </h4>
@@ -237,26 +262,20 @@
                             <p>A5A 5A5, Canada</p>
 
                         </div>
+                        <!-- Contact information ends -->
                     </li>
                 </ul>
-
             </div>
         </div>
-
         <div class='little-footer'>
             <div class="wrapper">
                 <p>
                     Copyright © 2019 HackerYou
                 </p>
             </div>
-
         </div>
-
-
     </footer>
-
-
-
+    <!-- Footer ends -->
 </body>
 
 </html>
